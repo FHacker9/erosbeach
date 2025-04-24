@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Projet CSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url(back0.jpg) no-repeat center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 300px;
+      padding: 150px;
+      margin: 20px;  
+      backdrop-filter: blur(2px);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 100px;
+      left: 10px;
+
+    }
+
+    .circle {
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: white;
+      background: url('logo.png') no-repeat center/cover ;
+      box-shadow: inset 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #333;
+      font-size: 45px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .a{
+       font-weight: bold;
+       position: absolute;
+       left: 50px;
+       top: 80px;
+
+       color: white;
+    }
+
+    button {
+      position: absolute;
+      bottom: 30px;
+      left: 70px;
+      width: 150px;
+      padding: 10px;
+      background-color: #0072ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #005dc1;
+    }
+
+    .navbar{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: #AFEEEE;
+      backdrop-filter: blur(2px);
+      opacity: 0.8;
+    }
+    ul{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px;
+    }
+    .navbar ul li {
+      margin: 0 90px;
+      font-weight: bold;
+      transition: color 0.3s;
+
+    }
+    .navbar ul li a:hover {
+      color: #0072ff;
+    }
+    .site-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-top-right-radius: 10px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      color: #25D366; 
+      transform: scale(1.2);
+    }
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">🏠Home</a>  </li>
+     <li><a href="#">📅Réservation</a></li>
+     <li><a href="mailto:erospepe2@gmail.com" title="Envoyer un mail">📞Contact</a></li>
+    </ul>
+    
+  </nav>
+  <section id="carte" style="position: absolute; right: -110px;top: 100px;">
+  <h2 style="color: black;position: absolute;top: -25px;left: 5px; font-size: 20px;background-color: #AFEEEE;border-radius: 6px;opacity: 0.8;">Notre Localisation</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.9788815186477!2d-0.1277582842308238!3d51.50735057963595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b333c4b1f2b%3A0x8b91d8a0c93ec8bb!2sLondon!5e0!3m2!1sfr!2suk!4v1617738805631!5m2!1sfr!2suk" 
+    width="60%" 
+    height="100%" 
+    style="border:0; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
+<footer class="site-footer">
+  <p>&copy; 2025 Eros Beach</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/erospepe2" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.pinterest.com/erospepe2" target="_blank" title="Pinterest">
+      <i class="fab fa-pinterest-p"></i>
+    </a>
+    <a href="https://wa.me/22893462250" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</footer>
+
+
+  <div class="card">
+    <div class="circle"></div>
+    <h2>Bienvenue</h2>
+    <div class="a">
+    <p>Ceci est le site de réservation pour notre résidence. Vous y trouverez les informations nécessaires.
+        Réservez en toute simplicité et profitez d’un séjour paisible au bord de la mer.</p>
+  </div>
+    <button>Commencer</button>
+  </div>
+</body>
+</html>
